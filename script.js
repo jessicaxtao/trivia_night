@@ -106,4 +106,9 @@ function submitPoints() {
     for (i = 0; i < checkboxes.length; i++) {
       checkboxes[i].checked = false;
     }
+
+    joker = document.getElementById("joker");
+    if (joker.checked === true) {
+      rows[Number(team.value)].cells[6].childNodes[0].checked = true;
+    }
 }
