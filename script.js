@@ -2,12 +2,16 @@ updateTotal();
 displaySolutions();
 addPoints();
 
-function sortTable(n) {
+function sortTable(n, ascending=false) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("scoretable");
     switching = true;
 
-    dir = "desc";
+    if(ascending === true) {
+      dir = "asc";
+    } else {
+      dir = "desc";
+    }
     while (switching) {
       switching = false;
       rows = table.rows;
@@ -95,6 +99,7 @@ function addPoints() {
 }
 
 function submitPoints() {
+    sortTable(0, true);
     round = document.getElementById("round");
     team = document.getElementById("team");
     table = document.getElementById("scoretable");
@@ -111,4 +116,6 @@ function submitPoints() {
     if (joker.checked === true) {
       rows[Number(team.value)].cells[6].childNodes[0].checked = true;
     }
+
+    joker.checked = false;
 }
