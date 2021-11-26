@@ -1,4 +1,5 @@
 updateTotal();
+displaySolutions();
 addPoints();
 
 function sortTable(n) {
@@ -51,7 +52,7 @@ function updateTotal() {
     }
 }
 
-function addPoints() {
+function displaySolutions() {
     round = document.getElementById("round");
     var element = document.getElementById("round1solutions");
     element.classList.add("hidden");
@@ -77,4 +78,27 @@ function addPoints() {
         var element = document.getElementById("round4solutions");
         element.classList.remove("hidden");
     }
+}
+
+function addPoints() {
+    checkboxes = document.getElementById("checkboxes").childNodes;
+    joker = document.getElementById("joker");
+    count = 0;
+    for (i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].type === "checkbox" && checkboxes[i].checked === true){
+            count++;
+        }
+    }
+    if (joker.checked === true) {
+        count = count * 2;
+    }
+}
+
+function submitPoints() {
+    round = document.getElementById("round");
+    team = document.getElementById("team");
+    table = document.getElementById("scoretable");
+    rows = table.rows;
+    rows[Number(team.value)].cells[Number(round.value)].innerHTML = count;
+    updateTotal();
 }

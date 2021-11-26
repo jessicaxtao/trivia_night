@@ -19,7 +19,7 @@ html {
     border-collapse: collapse;
     border: 2px solid rgb(200,200,200);
     letter-spacing: 1px;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     margin: auto;
   }
   
@@ -39,3 +39,51 @@ html {
 .hidden {
     display: none;
 }
+
+.answer-key {
+    float: left;
+    width: 20vw;
+    padding: 0;
+    margin: 0;
+    padding-left: 1vw;
+}
+
+#teamanswers {
+    float: left;
+    width: 15vw;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
