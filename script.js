@@ -101,4 +101,9 @@ function submitPoints() {
     rows = table.rows;
     rows[Number(team.value)].cells[Number(round.value)].innerHTML = count;
     updateTotal();
+
+    checkboxes = document.getElementById("checkboxes").childNodes;
+    for (i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].checked = false;
+    }
 }
