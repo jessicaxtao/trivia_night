@@ -1,6 +1,15 @@
+clearTable();
 updateTotal();
 displaySolutions();
 addPoints();
+
+function clearTable() {
+  table = document.getElementById("scoretable");
+  rows = table.rows;
+  for (i = 1; i < rows.length; i++) {
+    rows[i].cells[6].childNodes[0].checked = false;
+  }
+}
 
 function sortTable(n, ascending=false) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -20,14 +29,28 @@ function sortTable(n, ascending=false) {
         x = rows[i].getElementsByTagName("TD")[n];
         y = rows[i + 1].getElementsByTagName("TD")[n];
         if (dir == "asc") {
-          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-            shouldSwitch = true;
-            break;
+          if (n == 0) {
+            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else {
+            if (Number(x.innerHTML) > Number(x.innerHTML)) {
+              shouldSwitch = true;
+              break;
+            }
           }
         } else if (dir == "desc") {
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-            shouldSwitch = true;
-            break;
+          if (n == 0) {
+            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+              shouldSwitch = true;
+              break;
+            }
+          } else {
+            if (Number(x.innerHTML) < Number(y.innerHTML)) {
+              shouldSwitch = true;
+              break;
+            }
           }
         }
       }
