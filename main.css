@@ -1,0 +1,41 @@
+html {
+    font-family: sans-serif;
+  }
+
+  #scoreboard {
+      min-height: 100vh;
+  }
+
+  #add_points {
+      height: 90vh;
+      padding-top: 10vh;
+  }
+
+  #solutions {
+      padding-top: 5vh;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200,200,200);
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    margin: auto;
+  }
+  
+  td, th {
+    border: 1px solid rgb(190,190,190);
+    padding: 10px 20px;
+  }
+  
+  th {
+    background-color: rgb(235,235,235);
+  }
+  
+  td {
+    text-align: center;
+  }
+
+.hidden {
+    display: none;
+}
