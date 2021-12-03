@@ -42,7 +42,7 @@ html {
 
 .answer-key {
     float: left;
-    width: 20vw;
+    width: 75vw;
     padding: 0;
     margin: 0;
     padding-left: 1vw;
@@ -52,7 +52,7 @@ html {
     float: left;
     width: 15vw;
     padding: 0;
-    margin: 0;
+    margin-left: 5vw;
 }
 
 p {
@@ -86,4 +86,3 @@ p {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
-

@@ -108,6 +108,7 @@ function displaySolutions() {
 }
 
 function addPoints() {
+    displaySolutions();
     checkboxes = document.getElementById("checkboxes").childNodes;
     joker = document.getElementById("joker");
     count = 0;
